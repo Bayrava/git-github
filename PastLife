@@ -1,0 +1,688 @@
+#include <iostream>
+#include <windows.h>
+#include<ctype.h>
+#include<string>
+
+using namespace std;
+
+//Global Variables
+int total_points = 0;
+string str;
+
+ 
+void welcome()
+{
+	cout << "\t\t==================================================================================\n";
+	cout << "\t\t||*******************[ HOW DID YOU DIE IN YOUR PAST LIFE? ]*********************||\n";
+	cout << "\t\t==================================================================================\n" << endl;
+
+	cout << "                 \t\t           For each question simply answer\n"
+		 << "                 \t\t                   A,B,C,D or E.\n\n "
+		 << "                 \t\t           Answer all 10 questions and\n"
+		 << "                 \t\t                  We will find out\n"
+		 << "                 \t\t           HOW YOU DIED IN YOUR PAST LIFE!" << endl;
+	Sleep(10000); //change it later.
+	system("cls");
+}
+
+void question1()
+{
+	char answer1;
+	do {
+		cout << " 1. Do you have recurring nightmares?\n "
+			<< "A. Yes, a lot.\n"
+			<< " B. Nope.\n"
+			<< " C. I can't remember.\n"
+			<< " D. Yes, a few time.\n"
+			<< " E. Not anymore.";
+
+		cout << endl;
+		cout << endl;
+		cout << "type and enter your answer(e.x: a): ";
+		cin >> str;
+		answer1 = str[0];
+
+		switch (answer1)
+		{
+		case 'A':
+		case 'a':
+			total_points = total_points + 10;
+			break;
+		case 'B':
+		case 'b':
+			total_points = total_points + 50;
+			break;
+		case 'C':
+		case 'c':
+			total_points = total_points + 40;
+			break;
+		case 'D':
+		case 'd':
+			total_points = total_points + 20;
+			break;
+		case 'E':
+		case 'e':
+			total_points = total_points + 30;
+			break;
+		default:
+			cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+			Sleep(3000);
+			system("cls");
+			question1();
+		}
+		system("cls");
+		if(str.size() != 1)cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+		
+	} while (str.size() != 1);
+}
+
+void question2()
+{
+	char answer1;
+
+	cout << endl;
+	cout << endl;
+	do{
+	cout <<" 2. What career sounds most appealing to you?\n "
+		<< "A. Doctor.\n"
+		<< " B. Military or Lawyer.\n"
+		<< " C. Teacher.\n"
+		<< " D. Pilot or Engineer.\n"
+		<< " E. Whatever make me famous.";
+
+	cout << endl;
+	cout << endl;
+	cout << "type and enter your answer(e.x: a): ";
+	cin >> str;
+	answer1 = str[0];
+
+	switch (answer1)
+	{
+	case 'A':
+	case 'a':
+		total_points = total_points + 10;
+		break;
+	case 'B':
+	case 'b':
+		total_points = total_points + 40;
+		break;
+	case 'C':
+	case 'c':
+		total_points = total_points + 50;
+		break;
+	case 'D':
+	case 'd':
+		total_points = total_points + 20;
+		break;
+	case 'E':
+	case 'e':
+		total_points = total_points + 30;
+		break;
+	default:
+		cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+		Sleep(3000);
+		system("cls");
+		question2();
+	}
+
+		system("cls");
+		if (str.size() != 1)cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+
+	} while (str.size() != 1);
+}
+
+void question3()
+{
+	char answer1;
+
+	cout << endl;
+	cout << endl;
+	do{
+	cout <<" 3. Which of these options most disturbing you?\n "
+		<< "A. Hanging in rope.\n"
+		<< " B. Explode.\n"
+		<< " C. Health disease.\n"
+		<< " D. Gun point to your head.\n"
+		<< " E. Accident.";
+
+	cout << endl;
+	cout << endl;
+	cout << "type and enter your answer(e.x: a): ";
+	cin >> str;
+	answer1 = str[0];
+
+	switch (answer1)
+	{
+	case 'A':
+	case 'a':
+		total_points = total_points + 50;
+		system("cls");
+		break;
+	case 'B':
+	case 'b':
+		total_points = total_points + 40;
+		system("cls");
+		break;
+	case 'C':
+	case 'c':
+		total_points = total_points + 10;
+		system("cls");
+		break;
+	case 'D':
+	case 'd':
+		total_points = total_points + 30;
+		system("cls");
+		break;
+	case 'E':
+	case 'e':
+		total_points = total_points + 20;
+		system("cls");
+		break;
+	default:
+		cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+		Sleep(3000);
+		system("cls");
+		question3();
+	}
+	system("cls");
+	if (str.size() != 1)cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+
+	} while (str.size() != 1);
+}
+
+void question4()
+{
+	char answer1;
+
+	do{
+	cout <<" 4. How do you feel in a crowd?\n "
+		<< "A. Happy and Optimistic.\n"
+		<< " B. Alone and lost.\n"
+		<< " C. I don't really care one way or another.\n"
+		<< " D. Clumsy and shy.\n"
+		<< " E. Irritated, i like smaller group.";
+
+	cout << endl;
+	cout << endl;
+	cout << "type and enter your answer(e.x: a): ";
+	cin >> str;
+	answer1 = str[0];
+
+	switch (answer1)
+	{
+	case 'A':
+	case 'a':
+		total_points = total_points + 50;
+		break;
+	case 'B':
+	case 'b':
+		total_points = total_points + 40;
+		break;
+	case 'C':
+	case 'c':
+		total_points = total_points + 30;
+		break;
+	case 'D':
+	case 'd':
+		total_points = total_points + 20;
+		break;
+	case 'E':
+	case 'e':
+		total_points = total_points + 10;
+		break;
+	default:
+		cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+		Sleep(3000);
+		system("cls");
+		question4();
+	}
+	system("cls");
+	if (str.size() != 1)cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+
+	} while (str.size() != 1);
+}
+
+void question5()
+{
+	char answer1;
+
+	cout << endl;
+	cout << endl;
+	do {
+		cout << " 5. How do you feel, right now?\n "
+			<< "A. Excited.\n"
+			<< " B. Calm and Happy.\n"
+			<< " C. Worthless and Depressed.\n"
+			<< " D. Scared and Nervous.\n"
+			<< " E. Thrilled and Anxious.";
+
+		cout << endl;
+		cout << endl;
+		cout << "type and enter your answer(e.x: a): ";
+		cin >> str;
+		answer1 = str[0];
+
+		switch (answer1)
+		{
+		case 'A':
+		case 'a':
+			total_points = total_points + 40;
+			break;
+		case 'B':
+		case 'b':
+			total_points = total_points + 50;
+			break;
+		case 'C':
+		case 'c':
+			total_points = total_points + 10;
+			break;
+		case 'D':
+		case 'd':
+			total_points = total_points + 30;
+			break;
+		case 'E':
+		case 'e':
+			total_points = total_points + 20;
+			break;
+		default:
+			cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+			Sleep(3000);
+			system("cls");
+			question5();
+		}
+	if (str.size() != 1)cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+
+	} while (str.size() != 1);
+}
+
+void question6()
+{
+	char answer1;
+
+	cout << endl;
+	cout << endl;
+	do{
+	cout << " 6. Have you achieved your most important goal?\n "
+		<< "A. Yes, i've already achieved my goal.\n"
+		<< " B. I'm on my way.\n"
+		<< " C. No, i have some work to do.\n"
+		<< " D. No, but i'm headed in the right direction.\n"
+		<< " E. I don't need goals.";
+
+	cout << endl;
+	cout << endl;
+	cout << "type and enter your answer(e.x: a): ";
+	cin >> str;
+	answer1 = str[0];
+
+	switch (answer1)
+	{
+	case 'A':
+	case 'a':
+		total_points = total_points + 50;
+		system("cls");
+		break;
+	case 'B':
+	case 'b':
+		total_points = total_points + 30;
+		system("cls");
+		break;
+	case 'C':
+	case 'c':
+		total_points = total_points + 20;
+		system("cls");
+		break;
+	case 'D':
+	case 'd':
+		total_points = total_points + 40;
+		system("cls");
+		break;
+	case 'E':
+	case 'e':
+		total_points = total_points + 10;
+		system("cls");
+		break;
+	default:
+		cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+		Sleep(3000);
+		system("cls");
+		question6();
+	}
+	system("cls");
+	if (str.size() != 1)cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+
+	} while (str.size() != 1);
+}
+
+void question7()
+{
+	char answer1;
+
+	do{
+	cout << " 7. What annoy you the most?\n "
+		<< "A. Everything.\n"
+		<< " B. Relationship troubles.\n"
+		<< " C. Friendship or Family troubles.\n"
+		<< " D. Health or Fitness.\n"
+		<< " E. Nothing.";
+
+	cout << endl;
+	cout << endl;
+	cout << "type and enter your answer(e.x: a): ";
+	cin >> str;
+	answer1 = str[0];
+
+	switch (answer1)
+	{
+	case 'A':
+	case 'a':
+		total_points = total_points + 40;
+		break;
+	case 'B':
+	case 'b':
+		total_points = total_points + 20;
+		break;
+	case 'C':
+	case 'c':
+		total_points = total_points + 30;
+		break;
+	case 'D':
+	case 'd':
+		total_points = total_points + 10;
+		break;
+	case 'E':
+	case 'e':
+		total_points = total_points + 50;
+		break;
+	default:
+		cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+		Sleep(3000);
+		system("cls");
+		question7();
+	}
+	system("cls");
+	if (str.size() != 1)cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+
+	} while (str.size() != 1);
+}
+
+void question8()
+{
+	char answer1;
+
+	cout << endl;
+	cout << endl;
+	do{
+	cout << " 8. How are other people in general?\n "
+		<< "A. Heartless and Horrible.\n"
+		<< " B. They are alright.\n"
+		<< " C. Untrustworthy.\n"
+		<< " D. Selfish.\n"
+		<< " E. Fun and Awesome.";
+
+	cout << endl;
+	cout << endl;
+	cout << "type and enter your answer(e.x: a): ";
+	cin >> str;
+	answer1 = str[0];
+
+	switch (answer1)
+	{
+	case 'A':
+	case 'a':
+		total_points = total_points + 40;
+		break;
+	case 'B':
+	case 'b':
+		total_points = total_points + 20;
+		break;
+	case 'C':
+	case 'c':
+		total_points = total_points + 30;
+		break;
+	case 'D':
+	case 'd':
+		total_points = total_points + 10;
+		break;
+	case 'E':
+	case 'e':
+		total_points = total_points + 50;
+		break;
+	default:
+		cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+		Sleep(3000);
+		system("cls");
+		question8();
+	}
+	system("cls");
+	if (str.size() != 1)cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+
+	} while (str.size() != 1);
+}
+
+void question9()
+{
+	char answer1;
+
+	cout << endl;
+	cout << endl;
+	do{
+	cout << " 9. Do you believe in past lives?\n "
+		<< "A. Nope, it's just nonsense.\n"
+		<< " B. Yes, totally.\n"
+		<< " C. I don't know.\n"
+		<< " D. I hope so.\n"
+		<< " E. Maybe.";
+
+	cout << endl;
+	cout << endl;
+	cout << "type and enter your answer(e.x: a): ";
+	cin >> str;
+	answer1 = str[0];
+
+	switch (answer1)
+	{
+	case 'A':
+	case 'a':
+		total_points = total_points + 20;
+		system("cls");
+		break;
+	case 'B':
+	case 'b':
+		total_points = total_points + 50;
+		system("cls");
+		break;
+	case 'C':
+	case 'c':
+		total_points = total_points + 10;
+		system("cls");
+		break;
+	case 'D':
+	case 'd':
+		total_points = total_points + 30;
+		system("cls");
+		break;
+	case 'E':
+	case 'e':
+		total_points = total_points + 40;
+		system("cls");
+		break;
+	default:
+		cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+		Sleep(3000);
+		system("cls");
+		question9();
+	}
+	system("cls");
+	if (str.size() != 1)cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+
+	} while (str.size() != 1);
+}
+
+void question10()
+{
+	char answer1;
+
+	do{
+	cout << "10. *Close your eyes for 5 seconds*\n "
+		 << "What did you see?\n" 
+		 << " A. Blackness or something abstract.\n"
+		 << " B. Something i fear or hate.\n"
+		 << " C. Something i want or love.\n"
+		 << " D. Something from my daily life.\n"
+		 << " E. Something else.";
+
+	cout << endl;
+	cout << endl;
+	cout << "type and enter your answer(e.x: a): ";
+	cin >> str;
+	answer1 = str[0];
+	switch (answer1)
+	{
+	case 'A':
+	case 'a':
+		total_points = total_points + 50;
+		break;
+	case 'B':
+	case 'b':
+		total_points = total_points + 40;
+		break;
+	case 'C':
+	case 'c':
+		total_points = total_points + 20;
+		break;
+	case 'D':
+	case 'd':
+		total_points = total_points + 30;
+		break;
+	case 'E':
+	case 'e':
+		total_points = total_points + 10;
+		break;
+	default:
+		cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+		Sleep(3000);
+		system("cls");
+		question10();
+	}
+	system("cls");
+	if (str.size() != 1)cout << "Sorry, We don't have other options than A,B,C,D and E. TRY AGAIN.\n";
+
+	} while (str.size() != 1);
+}
+
+void calculation_message()
+{
+	system("cls");
+	string temp = "\t\t\t\t\t\t     Calculating...\n";
+	for (int i = 0; i < temp.size(); i++) {
+		cout << temp[i];
+		Sleep(100);
+	}
+
+	temp = "\t\t\t\t\t        Please wait a second..\n";
+	for (int i = 0; i < temp.size(); i++) {
+		cout << temp[i];
+		Sleep(100);
+	}
+	temp = "\t\t\t\t\t       Result will arive shortly.\n";
+	for (int i = 0; i < temp.size(); i++) {
+		cout << temp[i];
+		Sleep(100);
+	}
+
+	Sleep(1000);
+
+	if ((total_points <= 99) || (total_points >=501))
+		cout << "Something wrong! Are you trying to do something? BULLSHIT.\n";
+
+	if ((total_points >=100) && (total_points <= 160))
+	{
+		cout << "\n\n\t\t\t\t\t\t      SICKNESS !\n\n"; //Arrangement done!
+
+		cout << "\t\t\t\t\t    You were a healer, risking your\n"
+			 << "\t\t\t\t\t        life to help villages\n"
+			 << "\t\t\t\t\t     infected by a deadly plague.\n"
+			 << "\t\t\t\t\t       You fought very hard to\n"
+			 << "\t\t\t\t\t     save every life you could and\n"
+			 << "\t\t\t\t\t   cure the deadly disease but in the\n"
+			 << "\t\t\t\t\t       end, you got infected and\n"
+			 << "\t\t\t\t\t          struck down by the\n"
+			 << "\t\t\t\t\t        same disease yourself.\n";
+	}
+	else if ((total_points >= 170) && (total_points <= 250))
+	{
+		cout << "\n\n\t\t\t\t\t\t      MURDURED !\n\n"; //Arrangement done!
+
+		cout << "\t\t\t\t\t    You were stabbed in the back by\n"
+			<< "\t\t\t\t\t        someone you trusted most.\n"
+			<< "\t\t\t\t\t   You're very reserved and don't trust\n"
+			<< "\t\t\t\t\t        easily because deep down\n"
+			<< "\t\t\t\t\t           you still believe,\n"
+			<< "\t\t\t\t\t    in the end,everyone will fail you.\n";
+	}
+	else if ((total_points >= 260) && (total_points <= 330))
+	{
+		cout << "\n\n\t\t\t\t\t\t       ACCIDENT !\n\n"; //Arrangement done!
+
+		cout << "\t\t\t\t\t You death was sudden and unexpected.\n"
+			<< "\t\t\t\t\t        You were killed in an\n"
+			<< "\t\t\t\t\taccident and never got to say goodbye to\n"
+			<< "\t\t\t\t\t           your loved ones.\n"
+			<< "\t\t\t\t\t  You are expressive and social because\n"
+			<< "\t\t\t\t\tyou know, Sometimes there is no next time\n"
+		    << "\t\t\t\t\t   or second chance, it's now or never.\n";
+	}
+
+	else if ((total_points >= 340) && (total_points <= 420))
+	{
+		cout << "\n\n\t\t\t\t\t\t       BATTLE !\n\n"; //Arrangement done!
+
+		cout << "\t\t\t\t       You died heroically in a battle to save\n"
+			<< "\t\t\t\t\t             your comrade.\n"
+			<< "\t\t\t\t\t     You were a fearless warrior,\n"
+			<< "\t\t\t\t\t      who sacrificed himself so\n"
+			<< "\t\t\t\t\t      others may live free. You\n"
+			<< "\t\t\t\t\t       lived by a code and died\n"
+			<< "\t\t\t\t\t             with honor.\n";
+	}
+
+	else if ((total_points >= 430) && (total_points <= 500))
+	{
+		cout << "\n\n\t\t\t\t\t\t    NATURAL DEATH !\n\n"; //Arrangement done!
+
+		cout << "\t\t\t\t\t    You had a long and prosperous\n"
+			<< "\t\t\t\t\t    life with no regrets. You died\n"
+			<< "\t\t\t\t\t         of old age and passed\n"
+			<< "\t\t\t\t\t        away peacefully in your\n"
+			<< "\t\t\t\t\t         sleep. Long experience\n"
+			<< "\t\t\t\t\t        from your past life gave \n"
+			<< "\t\t\t\t\t       you wisdom and a realistic\n"
+			<< "\t\t\t\t\t             view of life.\n";
+	}
+}
+
+void all_questions()
+{
+	question1();
+	question2();
+	question3();
+	question4();
+	question5();
+	question6();
+	question7();
+	question8();
+	question9();
+	question10();
+}
+
+int main()
+{
+	welcome();
+	all_questions();
+	calculation_message();
+
+
+	system("PAUSE");
+	return 0;
+}
